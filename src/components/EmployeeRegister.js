@@ -4,7 +4,7 @@ import "./EmployeeRegister.css";
 const EmployeeRegister = ({
   employees,
   onDeleteEmployee,
-  onEditEmployee, // Use the correct prop for editing employees
+  onEditEmployee,
 }) => {
   return (
     <div className="employee-register-container">
@@ -28,11 +28,7 @@ const EmployeeRegister = ({
             {employees.map((employee, index) => (
               <tr key={index}>
                 <td>
-                  <img
-                    src={URL.createObjectURL(employee.photo)}
-                    alt={employee.name}
-                    className="employee-photo"
-                  />
+                  
                 </td>
                 <td>{employee.name}</td>
                 <td>{employee.surname}</td>
@@ -42,7 +38,7 @@ const EmployeeRegister = ({
                 <td className="action-btn-container">
                   <button
                     className="update-btn"
-                    onClick={() => onEditEmployee(index)} // Correct function for editing
+                    onClick={() => onEditEmployee(index)} 
                   >
                     Edit
                   </button>
