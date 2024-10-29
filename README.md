@@ -26,7 +26,7 @@ A simple Employee Registration application that allows users to manage employee 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/employee-registration-app.git
+git clone https://github.com/MylasJacob123/Upgraded-Employee-App
 cd employee-registration-app
 
 ### 2. Start the Application
