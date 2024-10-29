@@ -6,12 +6,11 @@ function Register({ onRegister }) {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(""); // State to handle registration errors
+  const [error, setError] = useState(""); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    // Basic validation for existing email
     const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
     const isEmailTaken = existingUsers.some(user => user.email === email);
     if (isEmailTaken) {
@@ -19,20 +18,19 @@ function Register({ onRegister }) {
       return;
     }
   
-    // Register new user
     const newUser = { firstName, lastName, email, password };
-    onRegister(newUser); // Pass newUser to the parent component
+    onRegister(newUser); 
     setFirstName("");
     setLastName("");
     setEmail("");
     setPassword("");
-    setError(""); // Clear any errors
+    setError("");
   };
 
   return (
     <div className="sign-up-container">
       <h2>Create Account</h2>
-      {error && <p className="error-message">{error}</p>} {/* Display error message */}
+      {error && <p className="error-message">{error}</p>}
       <form className="sign-up-form" onSubmit={handleSubmit}>
         <input
           className="sign-up-inputs"

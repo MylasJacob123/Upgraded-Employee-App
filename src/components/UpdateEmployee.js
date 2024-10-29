@@ -16,9 +16,9 @@ const UpdateEmployee = ({ employeeData, onUpdateEmployee, onCancel }) => {
 
   const validate = () => {
     const errors = {};
-    const namePattern = /^[A-Z].*/; // Starts with a capital letter
-    const idNumberPattern = /^\d{13}$/; // 13 digits
-    const rolePattern = /^[A-Z].*/; // Starts with a capital letter
+    const namePattern = /^[A-Z].*/; 
+    const idNumberPattern = /^\d{13}$/; 
+    const rolePattern = /^[A-Z].*/; 
 
     if (!namePattern.test(updatedEmployee.name)) errors.name = "Name must start with a capital letter";
     if (!namePattern.test(updatedEmployee.surname)) errors.surname = "Surname must start with a capital letter";
